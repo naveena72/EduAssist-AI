@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EduAssist AI - Bus Tracking</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="topbar"></div>
+  <div class="content">
+    <div class="page-head">
+      <div><h2>Smart Campus Bus Tracking</h2>
+        <div class="muted">Live simulated GPS - updates every 3 seconds</div></div>
+      <select id="busSelect" style="width:auto"></select>
+    </div>
+
+    <div class="grid stats" id="busStats"></div>
+
+    <div class="grid two" style="grid-template-columns: 2fr 1fr">
+      <div class="card" style="padding:12px"><div id="map"></div><div class="muted" id="mapNote" style="margin-top:8px"></div></div>
+      <div class="card"><h3>Stops &amp; ETA</h3>
+        <div class="table-wrap short"><table>
+          <thead><tr><th>Stop</th><th>ETA</th></tr></thead><tbody id="stopsBody"></tbody></table></div>
+        <p class="muted" style="margin-top:12px" id="driverInfo"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/bus.js"></script>
+</body>
+</html>

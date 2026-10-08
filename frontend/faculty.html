@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EduAssist AI - Faculty</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-role="faculty">
+  <div id="topbar"></div>
+  <div class="content">
+    <div class="page-head">
+      <div><h2>Faculty Dashboard</h2><div class="muted" id="notice"></div></div>
+      <button id="refreshBtn">Run AI Analysis</button>
+    </div>
+
+    <div class="grid stats" id="stats"></div>
+
+    <div class="grid two" id="chartsRow">
+      <div class="card"><h3>Risk distribution</h3><div class="chart-box"><canvas id="riskChart"></canvas></div></div>
+      <div class="card"><h3>Subject performance</h3><div class="chart-box"><canvas id="perfChart"></canvas></div></div>
+    </div>
+
+    <div class="card" style="margin-bottom:16px">
+      <div class="page-head" style="margin-bottom:8px"><h3 style="margin:0">Students</h3><span class="muted" id="tblCount"></span></div>
+      <div class="toolbar">
+        <input id="fSearch" placeholder="Search name or roll no">
+        <select id="fRisk"><option value="">All risk levels</option>
+          <option>High</option><option>Medium</option><option>Low</option></select>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Roll no</th><th>Name</th><th>Sec</th><th>Attendance</th><th>Marks</th>
+            <th>Progress</th><th>Risk (index)</th><th>Alerts</th></tr></thead>
+          <tbody id="tblBody"></tbody>
+        </table>
+      </div>
+      <div class="muted" style="margin-top:8px">Click a student for details.</div>
+    </div>
+
+    <div class="card">
+      <div class="page-head" style="margin-bottom:8px"><h3 style="margin:0">Early warning alerts</h3><span class="muted" id="alertCount"></span></div>
+      <div class="toolbar">
+        <select id="fSev"><option value="">All severities</option>
+          <option>Critical</option><option>Warning</option><option>Info</option></select>
+      </div>
+      <div class="table-wrap" id="alertList"></div>
+    </div>
+  </div>
+
+  <div class="modal-bg" id="modalBg">
+    <div class="modal"><button class="close" id="modalClose">&times;</button><div id="modalBody"></div></div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

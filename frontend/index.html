@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EduAssist AI - Login</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="login-wrap">
+    <form class="card" id="loginForm">
+      <h1>EduAssist AI</h1>
+      <p class="sub">Sign in to continue</p>
+
+      <label for="email">Email</label>
+      <input id="email" type="email" required autocomplete="username">
+
+      <label for="password">Password</label>
+      <input id="password" type="password" required autocomplete="current-password">
+
+      <button type="submit" id="submitBtn">Sign in</button>
+      <div class="error" id="error"></div>
+
+      <div class="demo">
+        Demo accounts (click to fill):<br>
+        <button type="button" class="link" data-e="student1@eduassist.com" data-p="student123">Student</button>
+        <button type="button" class="link" data-e="parent1@eduassist.com" data-p="parent123">Parent</button>
+        <button type="button" class="link" data-e="faculty1@eduassist.com" data-p="faculty123">Faculty</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EduAssist AI - Student</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-role="student">
+  <div id="topbar"></div>
+  <div class="content" id="view">
+    <div class="page-head"><div><h2 id="heading">Loading...</h2><div class="muted" id="subheading"></div></div></div>
+    <div class="grid stats" id="stats"></div>
+    <div class="grid two">
+      <div class="card"><h3>Progress score breakdown</h3><div id="breakdown"></div></div>
+      <div class="card"><h3>Risk factors</h3><div id="riskWhy"></div></div>
+    </div>
+    <div class="grid two">
+      <div class="card"><h3>Attendance by subject</h3><div class="chart-box"><canvas id="attChart"></canvas></div></div>
+      <div class="card"><h3>Alerts</h3><div id="alerts"></div></div>
+    </div>
+    <div class="card" style="margin-bottom:16px">
+      <h3>Marks by subject (%)</h3>
+      <div class="table-wrap short"><table>
+        <thead><tr><th>Subject</th><th>Internal 1</th><th>Internal 2</th><th>Model</th><th>Assignment</th><th>Average</th></tr></thead>
+        <tbody id="marksBody"></tbody></table></div>
+    </div>
+    <div class="card" id="busCard"></div>
+  </div>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/student_view.js"></script>
+</body>
+</html>
