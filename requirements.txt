@@ -3,10 +3,10 @@ uvicorn[standard]
 sqlalchemy
 pydantic
 numpy
+pandas
+scikit-learn
+joblib
 python-multipart
 pyjwt
 pytest
 httpx
-pandas
-scikit-learn
-joblib
